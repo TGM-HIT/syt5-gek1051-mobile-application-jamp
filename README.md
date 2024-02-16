@@ -1,2 +1,10 @@
 # syt5-gek1051-mobile-application-jamp
-syt5-gek1051-mobile-application-jamp created by GitHub Classroom
+A offline first shared shopping list for households of multiple people.
+
+## Team
+- **PO** Pfeiler
+- **TA** Akalin
+- **Dev** Mirauta
+- **Dev** Janits
+
+## Startpoints
