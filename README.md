@@ -1,5 +1,5 @@
 # syt5-gek1051-mobile-application-jamp
-A offline first shared shopping list for households of multiple people.
+An offline first shared shopping list for households of multiple people.
 
 ## Team
 - **PO** Pfeiler
