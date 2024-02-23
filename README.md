@@ -8,5 +8,3 @@ An offline first shared shopping list for households of multiple people.
 - **Dev** Janits
 
 ## Startpoints
-
-test
