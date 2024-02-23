@@ -52,3 +52,5 @@ Es kommt drauf an, wozu der Branch verwendet wird:
 7. Der Reviewer approved die Änderungen 
 
 8. Pull-Request mergen
+
+9. BITTE DEN BRANCH *NICHT* LÖSCHEN!!!!!
