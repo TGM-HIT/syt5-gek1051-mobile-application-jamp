@@ -1,0 +1,6 @@
+dnspython
+jwt
+email_validator
+fastapi
+passlib
+pydantic
