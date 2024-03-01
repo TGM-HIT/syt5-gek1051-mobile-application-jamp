@@ -26,7 +26,7 @@
 
 ## Zusammenfassung
 
-Pfeiler Nicolas (PFE):  2, 6, 8
-Akalin Yusuf (AKA): 3, 7, 9
-Janits Tobias (JAN): 
-Mirauta Nathanael (MIR): 
+* Pfeiler Nicolas (PFE):  2, 6, 8
+* Akalin Yusuf (AKA): 3, 7, 9
+* Janits Tobias (JAN): 
+* Mirauta Nathanael (MIR): 
