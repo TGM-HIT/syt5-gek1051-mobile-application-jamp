@@ -11,22 +11,26 @@
 
 ## User Stories
 
-| ID | Beschreibung                                                                                                                                                                                                       | SP | HEAD | Prio | Status |
-|----|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----|------|------|--------|
-| 1  | Als Benutzer soll es möglich sein, dass die Anwendung meine Daten erfolgreich mit dem Server synchronisieren kann, damit andere Benutzer meine Änderungen sehen können.                                           | 3  |    | MH   |        |
-| 2  | Als Benutzer möchte ich eine ansprechendes, responsives UI mit Tool-Tips und kurzen Erklärungen, damit ich mich besser zurechtfinde und eine erhöhte User experience habe.                                        | 3  | PFE | MH   |        |
-| 3  | Als Benutzer möchte ich, dass jegliche Änderungen von anderen Benutzern stets mit meiner Anwendung synchronisiert sind, damit Differenzen oder Synchronisierungsverzögerungen vermieden werden.                   | 3  | AKA | MH   |        |
-| 4  | Als Benutzer möchte ich mich registrieren und einloggen können, damit meine Einkaufslisten nicht zu meinem Gerät, sondern zu meinem Benutzer gespeichert werden.                                                  | 3  |      | MH   |        |
-| 5  | Als Benutzer möchte ich beim Angeben des Namens einer Supermarkt-Kette, die nächstgelegenen Filialen dieser Kette angezeigt bekommen, um mir und meinen Mitbenutzern den geplanten Ort meines Einkaufs zu teilen. | 2  |      | SH   |        |
-| 6  | Als Benutzer möchte ich, dass zwischen mobiler- und Desktop-Ansicht unterschieden werden kann, um eine effizientere Gestaltung der Applikation zu haben.                                                          | 2  | PFE | SH   |        |
-| 7  | Als Benutzer möchte ich entweder meine gesamte erstellte Liste oder einzelne Produkte anderen Benutzern zuteilen können, um "Aufträge" erteilen zu können.                                                        | 2  | AKA | SH   |        |
-| 8  | Als Benutzer möchte ich Kommentare hinzufügen und von von anderen lesen können, um mit meinen Mitbenutzern kommunizieren zu können.                                                                               | 2  | PFE | NTH  |        |
-| 9  | Als Benutzer möchte ich, dass ersichtlich ist, wer die Lise erstellt hat beziehungsweise Produkte hinzufügte, damit ich weiß, für wen der Einkauf gemacht werden soll.                                            | 1  | AKA | NTH  |        |
-| 10 | Als Benutzer möchte ich mehrere Läden hinzufügen können, um meinen Einkauf nicht nur auf einen beschränken zu müssen.                                                                                             | 1  |      | NTH  |        |
+| ID | Beschreibung                                                                                                                                                                                      | SP | HEAD | Prio | Status |
+|----|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----|------|------|--------|
+| 1  | Als Benutzer muss es möglich sein, dass die Anwendung meine Daten laufend mit dem Server synchronisiert, damit andere Benutzer meine Änderungen sehen können.                                     | 3  | MIR  | MH   |        |
+| 2  | Als Benutzer erwarte ich die Implementierung einer Suchleiste, mit der ich hinzugefügte Artikel einfach finden kann.                                                                              | 3  | PFE  | MH   |        |
+| 3  | Als Benutzer erwarte ich, dass jegliche Änderungen von anderen Benutzern stets mit meiner Anwendung synchronisiert sind, damit Differenzen oder Synchronisierungsverzögerungen vermieden werden.  | 3  | AKA  | MH   |        |
+| 4  | Als Benutzer erwarte ich den Erhalt eines Link, mit dem ich sofort auf den Dienst zugreifen kann, damit eine Registrierung aus Komfortgründen entgangen wird.                                     | 3  | JAN  | MH   |        |
+| 5  | Als Benutzer erwarte ich die Möglichkeit zur Angabe von Bildern, um erweiterte Informationen zum Produkt angeben zu können.                                                                       | 2  | JAN  | SH   |        |
+| 6  | Als Benutzer erwarte ich ein ansprechendes, responsives UI mit Tool-Tips und kurzen Erklärungen für Desktop und Mobile, damit ich mich besser zurechtfinde und eine erhöhte User Experience habe. | 3  | MIR  | SH   |        |
+| 7  | Als Benutzer erwarte ich, Mengenangaben mit inklusive Einheit zu den Artikeln zuweisen zu können, um Artikel nicht mehrfach anführen zu müssen.                                                   | 2  | PFE  | SH   |        |
+| 8  | Als Benutzer erwarte ich, dass das "Löschen" von Artikeln oder Listen keine wirkliche Entfernung darstellt, sondern diese nur Versteckt, um die Konsistenz zu bewahren.                           | 2  | AKA  | SH   |        |
+| 9  | Als Benutzer möchte ich Zusatzinformationen angeben können, um bei Bedarf erweiterte Informationen zu Artikel beifügen zu können.                                                                 | 2  | PFE  | NTH  |        |
+| 10 | Als Benutzer möchte ich mehrere Läden hinzufügen können, um meinen Einkauf nicht nur auf einen beschränken zu müssen.                                                                             | 1  | MIR  | NTH  |        |
+| 11 | Als Benutzer erwarte ich beim Angeben des Namens einer Supermarkt-Kette, die nächstgelegenen Filialen dieser Kette angezeigt zu bekommen, um den geplanten Ort meines Einkaufs zu notieren.       | 2  | AKA  | NTH  |        |
+| 12 | Als Benutzer erwarte ich, dass ich beim Hinzufügen eines Artikels diesem einen Tag zuweisen kann, wie z.B. Obst/Gemüse/Tiefkühlprodukt/..., um meinen Einkauf zeitlich zu minimieren.             | 2  | JAN  | NTH  |        |
 
 ## Zusammenfassung
 
-Pfeiler Nicolas (PFE):  2, 6, 8
-Akalin Yusuf (AKA): 3, 7, 9
-Janits Tobias (JAN): 
-Mirauta Nathanael (MIR): 
+| HEAD |        Name       | Stories | Anzahl SP |
+|:----:|:-----------------:|:-------:|:---------:|
+|  PFE |  Pfeiler Nicolas  |  2,7,9  |     7     |
+|  AKA |    Akalin Yusuf   |  3,8,11 |     7     |
+|  JAN |   Janits Tobias   |  4,5,12 |     7     |
+|  MIR | Mirauta Nathanael |  1,6,10 |     7     |
