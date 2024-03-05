@@ -44,3 +44,16 @@ body {
 .itemedit {
   background-color: white !important
 }
+
+.shopping-lists-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.shopping-list-card {
+  margin: 10px;
+  flex: 1 1 calc(25% - 20px);
+  min-width: 250px;
+}
