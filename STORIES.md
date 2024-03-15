@@ -13,7 +13,7 @@
 
 | ID | Beschreibung                                                                                                                                                                                      | SP | HEAD | Prio | Status |
 |----|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----|------|------|--------|
-| 1  | Als Benutzer muss es möglich sein, dass die Anwendung meine Daten laufend mit dem Server synchronisiert, damit andere Benutzer meine Änderungen sehen können.                                     | 3  | MIR  | MH   | #17  |
+| 1  | Als Benutzer muss es möglich sein, dass die Anwendung meine Daten laufend mit dem Server synchronisiert, damit andere Benutzer meine Änderungen sehen können.                                     | 3  | MIR  | MH   | [#1](https://github.com/TGM-HIT/syt5-gek1051-mobile-application-jamp/issues/17)  |
 | 2  | Als Benutzer erwarte ich die Implementierung einer Suchleiste, mit der ich hinzugefügte Artikel einfach finden kann.                                                                              | 2  | PFE  | MH   |        |
 | 3  | Als Benutzer erwarte ich, dass jegliche Änderungen von anderen Benutzern stets mit meiner Anwendung synchronisiert sind, damit Differenzen oder Synchronisierungsverzögerungen vermieden werden.  | 3  | AKA  | MH   |        |
 | 4  | Als Benutzer erwarte ich den Erhalt eines Link, mit dem ich sofort auf den Dienst zugreifen kann, damit eine Registrierung aus Komfortgründen entgangen wird.                                     | 3  | JAN  | MH   |        |
