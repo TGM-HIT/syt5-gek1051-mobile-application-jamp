@@ -1,6 +1,10 @@
 # syt5-gek1051-mobile-application-jamp
 Dieses Projekt ist eine Shopping-Listen-App, die von uns im Rahmen des SYT-Unterrichts entwickelt wird. Sie stellt eine Shopping-Liste dar, bei der Nutzer Shopping-Listen erstellen und verwalten können. Außerdem können sie kollaborativ mit anderen Nutzern an einer Shopping-Liste arbeiten. Diese Applikation soll eine Quality-of-life Verbesserung sein, indem die traditionellen Einkaufslisten durch eine digitale Variante ersetzt werden.
 
+## Deployment
+
+Die Web-App wird auf [https://magnificent-conkies-14ea88.netlify.app](https://magnificent-conkies-14ea88.netlify.app) gehostet.
+
 ## Team
 - **PO** Pfeiler
 - **TA** Akalin
