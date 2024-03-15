@@ -28,7 +28,7 @@ Es kommt drauf an, wozu der Branch verwendet wird:
 
 ## Step-by-Step guide
 
-![gif](./img/pr.gif)
+![](./img/contribution/pr.gif)
 
 1. Eigenen branch erstellen: `git checkout -b name-der-user-story`
 
