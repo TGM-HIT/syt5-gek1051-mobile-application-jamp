@@ -28,26 +28,19 @@ Es kommt drauf an, wozu der Branch verwendet wird:
 
 ## Step-by-Step guide
 
+![gif](./img/pr.gif)
+
 1. Eigenen branch erstellen: `git checkout -b name-der-user-story`
 
 2. Gewünschte Änderungen machen (User-Story umsetzen)
 
 3. Eigene Änderungen pushen: `git push`
 
-4. Auf Github gehen und zum "Pull-Requests" Tab wechseln:
-   ![Pull-Requests Tab auf Github](./img/contribution/image-20240223073309345.png)
+4. Auf Github gehen und zum "Pull-Requests" Tab wechseln
 
-   
+5. Pull-Request erstellen und Reviewer hinzufügen
 
-5. Pull-Request erstellen und Reviewer hinzufügen:
-   ![Pull-Request erstellen](./img/contribution/image-20240223073011821.png)
-
-   
-
-6. Pull-Request nochmal überprüfen:
-   ![Pull-Request überprüfen](./img/contribution/image-20240223073054229.png)
-
-   
+6. Pull-Request nochmal überprüfen
 
 7. Der Reviewer approved die Änderungen 
 
