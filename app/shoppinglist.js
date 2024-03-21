@@ -1,4 +1,3 @@
-
 // this will be the PouchDB database
 var db = new PouchDB('shopping');
 
@@ -137,8 +136,20 @@ var app = new Vue({
 		places: [],
 		selectedPlace: null,
 		syncURL:'',
-		syncStatus: 'notsyncing'
+		syncStatus: 'notsyncing',
+		searchQuery: '',
+		highlightedItemId: null,
 	},
+
+	watch: {
+		searchQuery(newVal) {
+		  const selectedItem = this.filteredShoppingListItems.find(item => item.title === newVal);
+		  if (selectedItem) {
+			this.navigateToItem(selectedItem);
+		  }
+		},
+	},
+
 	// computed functions return data derived from the core data.
 	// if the core data changes, then this function will be called too.
 	computed: {
@@ -185,6 +196,13 @@ var app = new Vue({
 			// newestFirst OR titleNameSort
 			this.shoppingListItems.sort(titleNameSort);
 			return this.shoppingListItems.sort(checkedItem);
+		},
+
+		filteredShoppingListItems() {
+			if (!this.searchQuery) return [];
+			return this.shoppingListItems.filter(item =>
+			  item.title.toLowerCase().includes(this.searchQuery.toLowerCase())
+			);
 		}
 	},
 	/**
@@ -578,6 +596,29 @@ var app = new Vue({
 			db.remove(match.doc).then((data) => {
 				this.shoppingListItems.splice(match.i, 1);
 			});
-		}
+		},
+
+		navigateToItem(item) {
+			this.currentListId = item.list; // Annahme: `list` ist die ID der Liste, zu der das Element gehört
+			this.mode = 'itemedit'; // Modus ändern, falls notwendig, um die Liste des Elements anzuzeigen
+			this.highlightedItemId = item._id;
+		},
+
+		clearSearchQuery() {
+			this.searchQuery = ''; // Löscht die Suchanfrage
+			this.highlightedItemId = null; // Setzt die Hervorhebung zurück
+			if (this.mode === 'itemedit') {
+			  this.mode = 'showlist'; // Wechselt zurück zum Home-Screen, falls im "itemedit" Modus
+			}
+			// Fügen Sie hier zusätzliche Logik ein, falls notwendig, um weitere Aufräumarbeiten durchzuführen
+		},
+
+		clearAndClose() {
+			this.searchQuery = ''; // Löscht die Suchanfrage
+			if (this.mode === 'itemedit' || this.mode === 'addlist') { // Angenommen, dass 'itemedit' der Modus ist, in dem eine Einkaufsliste geöffnet ist
+			  this.mode = 'showlist'; // Wechselt zurück zum "Home-Screen"
+			}
+			// Zusätzliche Logik hier, falls notwendig
+		  },
 	}
 })

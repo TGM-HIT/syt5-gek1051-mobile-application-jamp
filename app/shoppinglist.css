@@ -57,3 +57,67 @@ body {
   flex: 1 1 calc(25% - 20px);
   min-width: 250px;
 }
+
+.search-bar {
+  display: flex;
+  align-items: center; /* Stellt die vertikale Zentrierung aller Elemente sicher */
+  justify-content: space-between; /* Stellt den horizontalen Abstand sicher */
+  padding: 0.7em; /* Fügt etwas Außenabstand für die gesamte Suchleiste hinzu */
+}
+.search-bar input {
+  width: 50%;
+  min-width: 220px;
+  padding: 12px 24px;
+  border-radius: 24px;
+  font-size: 16px;
+  border: 0px;
+  outline: none;
+  color: black;
+}
+.search-bar [list]::-webkit-list-button,
+.search-bar [list]::-webkit-calendar-picker-indicator {
+  display: none !important;
+}
+
+.clear-search {
+  /* Stilisierungen für das "X" */
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 5px 10px; /* Beispiel für eine größere Hitbox */
+  font-size: 16px; /* Anpassung der Größe des "X" */
+}
+
+.clear-search {
+  cursor: pointer;
+  background-color: #f2f2f2; /* Hintergrundfarbe des Buttons */
+  border: 1px solid #ccc; /* Rahmen des Buttons */
+  border-radius: 50%; /* Macht den Button rund */
+  padding: 5px; /* Vergrößert die Hitbox */
+  width: 30px; /* Durchmesser des Buttons */
+  height: 30px; /* Durchmesser des Buttons */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  position: relative; /* Wichtig für die Positionierung der Pseudo-Elemente */
+}
+
+.clear-search::before,
+.clear-search::after {
+  content: '';
+  position: absolute;
+  width: 12px; /* Länge der Striche */
+  height: 2px; /* Dicke der Striche */
+  background-color: #333; /* Farbe der Striche */
+  top: 50%;
+  left: 50%;
+}
+
+.clear-search::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.clear-search::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}

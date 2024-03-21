@@ -27,4 +27,3 @@ app.listen(port, () => {
 })
 
 require('metrics-tracker-client').track()
-
