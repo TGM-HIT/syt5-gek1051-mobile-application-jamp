@@ -3,13 +3,18 @@ Dieses Projekt ist eine Shopping-Listen-App, die von uns im Rahmen des SYT-Unter
 
 ## Deployment
 
-Die Web-App wird auf [https://magnificent-conkies-14ea88.netlify.app](https://magnificent-conkies-14ea88.netlify.app) gehostet.
+Die Web-App wird auf [https://main--magnificent-conkies-14ea88.netlify.app](https://main--magnificent-conkies-14ea88.netlify.app) gehostet.
+Die CouchDB ist auf jamp.textminr.tech erreichbar. Für mehr Info zur CouchDB, bitte an der offiziellen CouchBD Dokumentation orientieren: ![https://github.com/apache/couchdb](https://github.com/apache/couchdb)
 
 ## Team
 - **PO** Pfeiler
 - **TA** Akalin
 - **Dev** Mirauta
 - **Dev** Janits
+
+## Technical Documentation
+
+Die Technical Documentation wird auf Overleaf geschrieben. Das Dokument.pdf kann in Overleaf gelesen werden: ![https://www.overleaf.com/read/swdfqkhksmqs#97f29d](https://www.overleaf.com/read/swdfqkhksmqs#97f29d)
 
 ## Startpoints
 
