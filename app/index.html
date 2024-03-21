@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>JÄMP Shopping List</title>
+  <title>Shopping List</title>
 
   <!-- mobile styling -->
   <meta name="theme-color" content="#448AFF">
@@ -37,33 +37,12 @@
       <md-toolbar>
         <!-- back button -->
         <md-button class="md-icon-button" v-if="mode != 'showlist'" v-on:click="onBack">
-          <md-icon>arrow_back</md-icon>
+            <md-icon>arrow_back</md-icon>
         </md-button>
         
         <!-- page title -->
         <h2 class="md-title" style="flex: 1">{{ pagetitle }}</h2>
         
-        <!-- search bar -->
-        <div class="search-bar">
-          <input 
-            id="search" 
-            type="search" 
-            placeholder="Start typing to search..." 
-            list="search-suggestions" 
-            autocomplete="off"
-            v-model="searchQuery"
-          />
-          
-          <!-- Verbesserter runder X-Button -->
-          <button @click="clearAndClose" class="clear-search">
-            <span class="x-icon"></span>
-          </button>
-          
-          <datalist id="search-suggestions">
-            <option v-for="item in filteredShoppingListItems" :value="item.title" :key="item._id"></option>
-          </datalist>
-        </div>
-
         <!-- visualisation of sync status -->
         <md-chip v-if="syncStatus == 'notsyncing'">Not Syncing</md-chip>
         <md-chip v-if="syncStatus == 'syncing'" class="md-primary">Syncing</md-chip>
