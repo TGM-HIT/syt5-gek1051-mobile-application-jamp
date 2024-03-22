@@ -24,12 +24,6 @@ Als Test-Tool benutzen wir cypress. Für mehr Info zu cypress, bitte die Technic
 
 Unsere Applikation verwendet eine FastAPI als Backend, in Kombination mit einer CouchDB, um die User-Verwaltung durchzuführen. Die API ist im Ordner `/api`. Als Frontend verwenden wir eine mit vue.js implementierte Fertiglösung einer Shopping-Liste. Diese ist im Ordner `/app` zu finden und muss verbessert bzw. angepasst werden. Die Daten von der Webapp werden in einer PouchDB gespeichert und mit einer CouchDB synchronisiert.
 
-## Setup
-
-1. `docker-compose up -d` (compose Datei ist noch tbd)
-2. FastAPI server starten
-3. Vue.js Web-App starten 
-
 ## Wie wir auf Github arbeiten
 
 siehe [CONTRIBUTION.md](./CONTRIBUTION.md)
