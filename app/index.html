@@ -49,7 +49,7 @@
         <md-chip v-if="syncStatus == 'syncerror'" class="md-warn">Sync Error</md-chip>
 
         <!-- save new shopping list button -->
-        <md-button class="md-icon-button" v-if="mode == 'addlist'" v-on:click="onClickSaveShoppingList" v-bind:disabled="singleList.title.length == 0">
+        <md-button class="md-icon-button add-list-button" v-if="mode == 'addlist'" v-on:click="onClickSaveShoppingList" v-bind:disabled="singleList.title.length == 0">
           <md-icon>check</md-icon>
         </md-button>
 
@@ -75,7 +75,7 @@
           <!-- shopping list name -->
           <md-input-container>
             <label>List name</label>
-            <md-input placeholder="e.g. Food" v-model="singleList.title"></md-input>
+            <md-input placeholder="e.g. Food" v-model="singleList.title" class="new-list-title"></md-input>
           </md-input-container>   
           
           <!-- shopping place name -->
@@ -270,7 +270,7 @@
 
       <!-- floating 'add shopping list' button -->
       <div class="floatingbutton" v-if="mode == 'showlist'">
-        <md-button class="md-fab md-primary md-raised" v-on:click="onClickAddShoppingList">
+        <md-button class="md-fab md-primary md-raised add-list" v-on:click="onClickAddShoppingList">
           <md-icon>add</md-icon>
         </md-button>
       </div> <!-- floating 'add shopping list' button -->
