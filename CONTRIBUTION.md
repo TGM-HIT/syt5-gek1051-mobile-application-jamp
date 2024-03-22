@@ -47,3 +47,8 @@ Es kommt drauf an, wozu der Branch verwendet wird:
 8. Pull-Request mergen
 
 9. BITTE DEN BRANCH *NICHT* LÖSCHEN!!!!!
+
+
+## Test Cases schreiben
+
+Test Cases werden mit Cypress geschrieben. Eine ausführliche Erklärung hierfür ist in der Technical Documentation. Die Tests werden unter /test geschrieben. Hier bitte je nach Anforderungen neue Dateien bzw. falls noch nicht vorhanden den /test Ordner erstellen.
