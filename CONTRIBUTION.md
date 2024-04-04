@@ -51,4 +51,4 @@ Es kommt drauf an, wozu der Branch verwendet wird:
 
 ## Test Cases schreiben
 
-Test Cases werden mit Cypress geschrieben. Eine ausführliche Erklärung hierfür ist in der Technical Documentation. Die Tests werden unter /test geschrieben. Hier bitte je nach Anforderungen neue Dateien bzw. falls noch nicht vorhanden den /test Ordner erstellen.
+Test Cases werden mit Cypress geschrieben. Cypress ist gratis und Open-Source. Lokal können die Tests geschrieben und verwaltet werden, mithilfe der Cypress Cloud kann man die Tests aufzeichnen. Eine ausführliche Erklärung hierfür ist in der Technical Documentation. Die Tests werden unter /test geschrieben. Hier bitte je nach Anforderungen neue Dateien bzw. falls noch nicht vorhanden den /test Ordner erstellen.
