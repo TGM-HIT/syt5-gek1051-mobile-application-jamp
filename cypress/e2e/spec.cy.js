@@ -51,3 +51,16 @@ describe('Add Shopping List test', function() {
 
   });
 });
+
+describe('Search bar functionality', function() {
+
+  // Der eigentliche Testfall
+  it('should enter a text in the search bar and click enter', function() {
+    cy.visit("https://main--magnificent-conkies-14ea88.netlify.app")
+    // Den Button finden und darauf klicken
+    var inputField = cy.get('#search');
+
+    // Das Eingabefeld finden und Text eingeben
+    inputField.type('Apfel' + '{enter}');
+  });
+});
