@@ -121,3 +121,39 @@ body {
 .clear-search::after {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
+
+.quantity-spinner {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 120px; /* Anpassen für ein ausgewogenes Layout */
+  background-color: #f2f2f2; /* Hintergrundfarbe der Spinbox */
+  border-radius: 5px; /* Abgerundete Ecken */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Leichter Schatten für Tiefe */
+  margin-right: 50px; /* Fügt einen linken Abstand von 50px hinzu */
+}
+
+.quantity-button {
+  background-color: #448AFF; /* Farbe der Buttons, passend zum Thema */
+  border: none;
+  color: white; /* Farbe des Textes/Icons auf den Buttons */
+  cursor: pointer;
+  width: 22px; /* Breite der Buttons */
+  height: 22px; /* Höhe der Buttons */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px; /* Abgerundete Ecken für die Buttons */
+  user-select: none; /* Verhindert die Auswahl des Button-Textes */
+}
+
+.quantity-button:hover {
+  background-color: #3578E5; /* Dunklere Farbe beim Überfahren mit der Maus */
+}
+
+.quantity-input {
+  width: 50px; /* Anpassen für ein ausgewogenes Layout */
+  text-align: center;
+  border: 1px solid #ccc; /* Grenze des Eingabefelds */
+  border-radius: 5px; /* Abgerundete Ecken für das Eingabefeld */
+}

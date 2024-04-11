@@ -54,7 +54,7 @@
             v-model="searchQuery"
           />
           
-          <!-- Verbesserter runder X-Button -->
+          <!-- X-Button -->
           <button @click="clearAndClose" class="clear-search">
             <span class="x-icon"></span>
           </button>
@@ -192,6 +192,12 @@
           <!-- shopping list item title -->
           <div class="md-list-text-container">
             <span v-bind:class="{ cardchecked: item.checked}">{{ item.title }}</span>
+          </div>
+
+          <div class="md-list-action quantity-spinner">
+            <button @click="decrementQuantity(item)" class="quantity-button">-</button>
+            <input type="number" v-model="item.quantity" @input="updateItemQuantity(item)" min="1" class="quantity-input"/>
+            <button @click="incrementQuantity(item)" class="quantity-button">+</button>
           </div>
 
           <!-- shopping list item delete button -->
