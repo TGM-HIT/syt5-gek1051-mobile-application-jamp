@@ -570,14 +570,18 @@ var app = new Vue({
 			var url = 'https://nominatim.openstreetmap.org/search';
 			var qs = {
 				format: 'json',
+				limit: 40,
 				addressdetails: 1, 
 				namedetails: 1,
 				q: this.singleList.place.title
 			};
+			console.log(qs)
 			ajax(url, qs).then((d) => {
 
 				// add the list of places to our list
-				this.places = d;
+				this.places = d.filter(item => item.address && item.address.country_code === 'at');
+				console.log(this.places)
+
 
 				// if there is only one item in the list
 				if (d.length ==1) {

@@ -102,8 +102,8 @@
           <!-- shopping place name -->
           <md-input-container>
             <label>Place name</label>
-            <md-input placeholder="e.g. Whole Foods, Reno" v-model="singleList.place.title"></md-input>
-            <md-button class="md-raised" v-bind:disabled="singleList.place.title.length==0" v-on:click="onClickLookup">Lookup</md-button>             
+            <md-input placeholder="e.g. Whole Foods, Reno" class="place-input" v-model="singleList.place.title"></md-input>
+            <md-button class="md-raised lookup-button" v-bind:disabled="singleList.place.title.length==0" v-on:click="onClickLookup">Lookup</md-button>             
           </md-input-container>   
 
           <!-- shopping place pull-down list -->
