@@ -73,6 +73,34 @@ describe('Gear Button Test', () => {
   })
 })
 
+
+describe('Local Places Test', () => {
+  it('should only get places from austria', () => {
+    cy.visit('http://localhost:8081') // Besuche die Seite unter localhost:8081
+
+    // Klicke auf den Local Places Button
+    cy.get('.add-list').click();7
+
+    var inputField = cy.get('.place-input');
+    inputField.type('Nah&Frisch');
+
+    cy.get('.lookup-button').click();
+  })
+
+  it('should get no places from austria', () => {
+    cy.visit('http://localhost:8081') // Besuche die Seite unter localhost:8081
+
+    // Klicke auf den Local Places Button
+    cy.get('.add-list').click();
+
+    var inputField = cy.get('.place-input');
+    inputField.type('Rewe');
+
+    cy.get('.lookup-button').click();
+  })
+})
+
+
 describe('Input and Button Click Test', () => {
   it('Types into input field and clicks Start Sync button', () => {
     cy.visit('https://main--magnificent-conkies-14ea88.netlify.app') // Besuche die Seite unter localhost:8081
