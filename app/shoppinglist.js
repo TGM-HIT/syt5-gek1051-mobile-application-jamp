@@ -329,6 +329,20 @@ var app = new Vue({
 				// if this is an incoming change
 				if (info.direction == 'pull' && info.change && info.change.docs) {
 
+					// Check for conflicts
+					log = db.get(change._id, { conflicts: true }).then((data) => {
+					console.log('Eventual Conflicts (Only if old revisions will be printed):');
+					console.log(data);
+		
+					// print lower revisions
+						for (var rev in data._conflicts) {
+							db.get(change._id, { rev: data._conflicts[rev] }).then((res) => {
+								console.log('Lower revision:');
+								console.log(res);
+							});
+						}
+					});
+
 					// loop through all the changes
 					for(var i in info.change.docs) {
 						var change = info.change.docs[i];
