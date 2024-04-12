@@ -27,7 +27,8 @@ const sampleListItem = {
 	"title": "",
 	"checked": false,
 	"createdAt": "",
-	"updatedAt": ""
+	"updatedAt": "",
+	"quantity": "1"
 };
 
 /**
@@ -246,6 +247,24 @@ var app = new Vue({
 
 	},
 	methods: {
+		incrementQuantity: function(item) {
+			item.quantity = parseInt(item.quantity) + 1;
+			this.updateItemQuantity(item);
+		  },
+		  decrementQuantity: function(item) {
+			item.quantity = Math.max(1, parseInt(item.quantity) - 1); // Stellen Sie sicher, dass die Menge nicht kleiner als 1 wird
+			this.updateItemQuantity(item);
+		  },
+		updateItemQuantity: function(item) {
+			// Aktualisieren Sie die Menge in der Datenbank
+			item.updatedAt = new Date().toISOString(); // Aktualisieren des updatedAt-Felds
+			db.put(item).then((response) => {
+			  console.log("Item updated successfully", response);
+			  item._rev = response.rev; // Aktualisieren der _rev-Eigenschaft mit der neuen Revision
+			}).catch((err) => {
+			  console.error("Error updating item", err);
+			});
+		},
 		/**
 		 * Called when the settings button is pressed. Sets the mode
 		 * to 'settings' so the Vue displays the settings panel.
