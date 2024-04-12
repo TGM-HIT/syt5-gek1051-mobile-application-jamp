@@ -570,6 +570,7 @@ var app = new Vue({
 			var url = 'https://nominatim.openstreetmap.org/search';
 			var qs = {
 				format: 'json',
+				limit: 40,
 				addressdetails: 1, 
 				namedetails: 1,
 				q: this.singleList.place.title
