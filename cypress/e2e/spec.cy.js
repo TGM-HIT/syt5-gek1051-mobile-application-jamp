@@ -1,3 +1,58 @@
+// ------ Pfeiler's Testcases: ------
+// --- Implementierung der Suchleiste ---
+
+describe('ShoppingListApp', function() {
+  describe('SearchBar', function() {
+    beforeEach(function() {
+      // Initialisiere den Zustand der Anwendung vor jedem Test
+      app.clearSearchQuery();
+    });
+
+    it('should successfully filter items when a valid search query is provided', function() {
+      app.searchQuery = 'milch'; // Angenommen, 'milch' ist ein gültiger Suchbegriff
+      app.filteredShoppingListItems(); // Filterfunktion aufrufen
+      assert.notEqual(app.filteredShoppingListItems().length, 0, 'Items should be found');
+    });
+
+    it('should return no items when an invalid search query is provided', function() {
+      app.searchQuery = 'xyz'; // Angenommen, 'xyz' ist kein gültiger Suchbegriff
+      app.filteredShoppingListItems(); // Filterfunktion aufrufen
+      assert.equal(app.filteredShoppingListItems().length, 0, 'No items should be found');
+    });
+  });
+});
+
+// --- Horizontales Anordnen von Einkaufslisten ---
+
+// Diese Funktion wurde hauptsächlich in CSS implementiert, Java Script Tests können diese Funktion also nicht testen.
+
+// --- Angabe von Mengenangaben ---
+
+describe('QuantityHandling', function() {
+  beforeEach(function() {
+    // Initialisiere den Zustand der Anwendung vor jedem Test
+    // Beispiel: Auswahl eines bestimmten Listenelements
+    app.currentListId = 'list1'; // Angenommen, 'list1' ist die ID einer Liste
+    app.newItemTitle = 'Brot';
+    app.onAddListItem(); // Fügt ein Element hinzu
+  });
+
+  it('should correctly increment item quantity', function() {
+    const item = app.shoppingListItems.find(item => item.title === 'Brot');
+    const initialQuantity = parseInt(item.quantity);
+    app.incrementQuantity(item);
+    assert.equal(parseInt(item.quantity), initialQuantity + 1, 'Quantity should be incremented by 1');
+  });
+
+  it('should correctly decrement item quantity but not below 1', function() {
+    const item = app.shoppingListItems.find(item => item.title === 'Brot');
+    app.decrementQuantity(item); // Angenommen, die anfängliche Menge ist 1
+    assert.equal(parseInt(item.quantity), 1, 'Quantity should not be less than 1');
+  });
+});
+
+// ------ End of Pfeiler's Test Cases ------
+
 describe('Page Load Test', () => {
   it('Successfully opens the page', () => {
     cy.visit('https://main--magnificent-conkies-14ea88.netlify.app') // Besuche die Seite
